@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VeloRent — аренда велосипедов</title>
+
+  <!-- Шрифт -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Стили проекта -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Slick -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+  <!-- jQuery + slick -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+
+  <!-- Основной скрипт -->
+  <script src="js/main.js" defer></script>
+  
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+  <div class="container header_row">
+    <a href="index.html" class="logo">
+      <img src="img/logo.svg" alt="VeloRent" class="logo_image">
+    </a>
+
+    <nav class="nav" aria-label="Основное меню">
+      <ul class="nav_list">
+        <li><a class="nav_link" href="index.html">Главная</a></li>
+        <li><a class="nav_link" href="catalog.html">Велосипеды и цены</a></li>
+        <li><a class="nav_link" href="reserve.html">Бронирование</a></li>
+        <li><a class="nav_link" href="contact.html">О нас и контакты</a></li>
+      </ul>
+    </nav>
+
+    <div class="header_button">
+      <a class="btn btn-primary" href="catalog.html">Забронировать</a>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <section class="booking booking-success">
+    <div class="container">
+
+      <header class="booking_success-header">
+        <div class="success_icon">
+          <img src="img/icons/check.png" alt="Успешно" class="success_icon-img">
+        </div>
+        <h1 class="booking_success-title">Бронирование подтверждено!</h1>
+        <p class="booking_success-subtitle">
+          Спасибо за ваш заказ! Мы подготовим велосипед к указанному времени.
+        </p>
+        <div class="success_order-number">
+          Номер заказа: <span>ORD-2025-001</span>
+        </div>
+      </header>
+
+      <section class="success_card">
+        <h2 class="success_card-title">Детали заказа</h2>
+
+        <div class="success_details">
+          <!-- Дата и время начала -->
+          <div class="success_row">
+            <div class="success_icon-small">
+              <img src="img/icons/date.png" alt="" class="success_icon-small-img">
+            </div>
+            <div class="success_row-text">
+              <div class="success_row-label">Дата и время начала</div>
+              <div class="success_row-value">
+                <span class="text-main">15 октября 2025</span><br>
+                <span class="text-small">10:00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Модель и длительность -->
+          <div class="success_row">
+            <div class="success_icon-small">
+              <img src="img/icons/time.png" alt="" class="success_icon-small-img">
+            </div>
+            <div class="success_row-text">
+              <div class="success_row-label">Модель и длительность</div>
+              <div class="success_row-value">
+                <span class="text-main">Mountain Bike</span><br>
+                <span class="text-small">3 часа</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Место получения -->
+          <div class="success_row">
+            <div class="success_icon-small">
+              <img src="img/icons/place.png" alt="" class="success_icon-small-img">
+            </div>
+            <div class="success_row-text">
+              <div class="success_row-label">Место получения</div>
+              <div class="success_row-value">
+                <span class="text-main">Москва, ул. Примерная, 123</span><br>
+                <span class="text-small">Приезжайте за 10 минут до начала аренды</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Сумма к оплате -->
+          <div class="success_row">
+            <div class="success_icon-small">
+              <img src="img/icons/payment.png" alt="" class="success_icon-small-img">
+            </div>
+            <div class="success_row-text">
+              <div class="success_row-label">Сумма к оплате</div>
+              <div class="success_row-value">
+                <span class="price-big">9750 ₽</span><br>
+                <span class="text-small">Оплата при получении</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="success_next">
+        <h3 class="success_next-title">Что дальше?</h3>
+        <ul class="success_next-list">
+          <li>Мы свяжемся с вами в ближайшее время для уточнения деталей по телефону</li>
+          <li>Письмо с подтверждением и всеми деталями отправлено на email</li>
+          <li>Пожалуйста, возьмите с собой документ, удостоверяющий личность</li>
+          <li>Если у вас возникнут вопросы, звоните нам: +7 (495) 123-45-67</li>
+        </ul>
+      </section>
+
+      <!-- Кнопки -->
+      <div class="success_actions">
+        <a href="#" class="btn btn-secondary">Скачать квитанцию</a>
+        <a href="index.html" class="btn btn-secondary">На главную</a>
+        <a href="reserve.html" class="btn btn-primary">Новая бронь</a>
+      </div>
+
+      <!-- Блок "Нужна помощь?" -->
+      <section class="success_help">
+        <h3 class="success_help-title">Нужна помощь?</h3>
+        <p class="success_help-text">Наша служба поддержки работает круглосуточно</p>
+        <p class="success_help-contacts">
+          <a href="tel:+74951234567">+7 (495) 123-45-67 или </a>
+          <a href="mailto:info@velorent.ru">info@velorent.ru</a>
+        </p>
+      </section>
+
+    </div>
+  </section>
+</main>
+
+
+<!-- Подвал -->
+    <footer class="footer">
+  <div class="container footer_inner">
+
+    <div class="footer_col footer_brand">
+      <img src="img/logo.svg" alt="VeloRent" class="footer_logo">
+      <p>Аренда велосипедов — быстро и удобно. Ваше приключение начинается здесь.</p>
+    </div>
+
+    <div class="footer_col">
+      <h4>Навигация</h4>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Велосипеды и цены</a></li>
+        <li><a href="reserve.html">Бронирование</a></li>
+        <li><a href="contact.html">О нас и контакты</a></li>
+      </ul>
+    </div>
+
+    <div class="footer_col">
+      <h4>Контакты</h4>
+      <ul class="footer_contacts">
+        <li>
+          <img src="img/icons/Phone.png" alt="Телефон">
+          <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+        </li>
+        <li>
+          <img src="img/icons/mail.png" alt="Email">
+          <a href="mailto:info@velorent.ru">info@velorent.ru</a>
+        </li>
+        <li>
+          <img src="img/icons/location.png" alt="Адрес">
+          <span>Москва, ул. Примерная, 123</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer_col">
+      <h4>Социальные сети</h4>
+      <div class="footer_socials">
+        <a href="#"><img src="img/icons/tg.png" alt="Telegram"></a>
+        <a href="#"><img src="img/icons/wa.png" alt="WhatsApp"></a>
+        <a href="#"><img src="img/icons/vk.png" alt="VK"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer_bottom">
+    <p>© 2025 VeloRent. Все права защищены.</p>
+  </div>
+</footer>
+</body>
+</html>

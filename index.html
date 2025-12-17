@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VeloRent — аренда велосипедов</title>
+
+  <!-- Шрифт -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Стили проекта -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Стили слайдера Slick -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+  <!-- jQuery и Slick (скрипты) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+
+  <!-- Основной скрипт -->
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <!-- Шапка -->
+    <header class="header">
+  <div class="container header_row">
+    <a href="index.html" class="logo">
+      <img src="img/logo.svg" alt="VeloRent" class="logo_image">
+    </a>
+
+    <nav class="nav" aria-label="Основное меню">
+      <ul class="nav_list">
+        <li><a class="nav_link" href="index.html">Главная</a></li>
+        <li><a class="nav_link" href="catalog.html">Велосипеды и цены</a></li>
+        <li><a class="nav_link" href="reserve.html">Бронирование</a></li>
+        <li><a class="nav_link" href="contact.html">О нас и контакты</a></li>
+      </ul>
+    </nav>
+
+    <div class="header_button">
+      <a class="btn btn-primary" href="catalog.html">Забронировать</a>
+    </div>
+  </div>
+</header>
+    <main class="main"></main>
+    <!-- Заглавная -->
+<section class="hero">
+  <div class="container hero_row">
+    <!-- Левая часть -->
+    <div class="hero_content">
+      <h1 class="hero_title">Аренда велосипедов – <br><span>быстро и удобно</span></h1>
+      <p class="hero_subtitle">
+        Выберите модель и забронируйте <br>онлайн за 2 минуты
+      </p>
+      <div class="hero_buttons">
+        <a href="catalog.html" class="btn btn-primary">Выбрать велосипед</a>
+        <a href="catalog.html" class="btn btn-secondary">Цены</a>
+      </div>
+    </div>
+    <!-- Правая часть -->
+    <div class="hero_image">
+      <img src="img/bike-hero.png" alt="Велосипед VeloRent" />
+    </div>
+  </div>
+</section>
+
+<!-- Почему выбирают нас -->
+<section class="benefits">
+  <div class="container">
+    <h2 class="benefits_title">Почему выбирают нас</h2>
+    <p class="benefits_subtitle">Мы делаем аренду велосипедов простой и приятной</p>
+
+    <div class="benefits_grid">
+      <div class="benefit_item">
+        <img src="img/icons/box.svg" alt="Иконка доставка">
+        <h3>Доставка <br>по городу</h3>
+        <p>Привезем велосипед в любую точку города за 30 минут</p>
+      </div>
+
+      <div class="benefit_item">
+        <img src="img/icons/headphones.svg" alt="Иконка техподдержка">
+        <h3>Техподдержка <br>24/7</h3>
+        <p>Мы всегда на связи и готовы помочь в любой ситуации</p>
+      </div>
+
+      <div class="benefit_item">
+        <img src="img/icons/helmet.svg" alt="Шлем велосипедный">
+        <h3>Шлем в комплекте</h3>
+        <p>Безопасность превыше всего – защитная экипировка включена</p>
+      </div>
+
+       <div class="benefit_item">
+        <img src="img/icons/discount.svg" alt="Скидки">
+        <h3>Скидки <br>на выходных</h3>
+        <p>Специальные цены на аренду в субботу и воскресенье</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Как это работает -->
+<section class="steps">
+  <div class="container">
+    <h2 class="steps_title">Как это работает</h2>
+    <p class="steps_subtitle">Всего 3 простых шага до вашего путешествия</p>
+
+    <div class="steps_line">
+      <div class="step" data-step="1">
+        <div class="step_circle"></div>
+        <h3>Выбор модели</h3>
+        <p>Выберите подходящий велосипед из нашего каталога</p>
+      </div>
+
+      <div class="step" data-step="2">
+        <div class="step_circle"></div>
+        <h3>Дата и время</h3>
+        <p>Укажите когда и на сколько <br>вам нужен велосипед</p>
+      </div>
+
+      <div class="step" data-step="3">
+        <div class="step_circle"></div>
+        <h3>Подтверждение</h3>
+        <p>Оплатите и получите <br>подтверждение на почту</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Наши велосипеды -->
+<section class="bikes">
+  <div class="container">
+    <h2 class="bikes_title">Наши велосипеды</h2>
+    <p class="bikes_subtitle">Выберите подходящую модель для ваших целей</p>
+
+    <div class="bikes_grid bikes-slider">
+
+      <!-- 1 -->
+      <div class="bike_card">
+        <img src="img/products/bike1.png" alt="City Bike">
+        <div class="bike_info">
+          <div class="bike_header">
+            <h3>City Bike</h3>
+            <span class="bike_tag blue">Популярный</span>
+          </div>
+
+          <p>Идеален для городских прогулок и поездок на работу</p>
+
+          <div class="bike_bottom-main">
+            <div class="bike_price">от 300 ₽/час</div>
+            <a href="catalog.html" class="btn btn-outline">Подробнее</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="bike_card">
+        <img src="img/products/bike3.png" alt="Mountain Bike">
+        <div class="bike_info">
+          <div class="bike_header">
+            <h3>Mountain Bike</h3>
+            <span class="bike_tag green">Топ выбора</span>
+          </div>
+
+          <p>Для активного отдыха и поездок по пересечённой местности</p>
+
+          <div class="bike_bottom-main">
+            <div class="bike_price">от 400 ₽/час</div>
+            <a href="catalog.html" class="btn btn-outline">Подробнее</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="bike_card">
+        <img src="img/products/bike5.png" alt="E-Bike">
+        <div class="bike_info">
+          <div class="bike_header">
+            <h3>E-Bike</h3>
+            <span class="bike_tag teal">Новинка</span>
+          </div>
+
+          <p>Электровелосипед для комфортных поездок без усилий</p>
+
+          <div class="bike_bottom-main">
+            <div class="bike_price">от 500 ₽/час</div>
+            <a href="catalog.html" class="btn btn-outline">Подробнее</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="bike_card">
+        <img src="img/products/bike6.png" alt="Kids Bike">
+        <div class="bike_info">
+          <div class="bike_header">
+            <h3>Kids Bike</h3>
+            <span class="bike_tag blue">Детский</span>
+          </div>
+
+          <p>Детский велосипед с защитными колесиками</p>
+
+          <div class="bike_bottom-main">
+            <div class="bike_price">от 200 ₽/час</div>
+            <a href="catalog.html" class="btn btn-outline">Подробнее</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="bike_card">
+        <img src="img/products/bike7.png" alt="Kids Bike Pro">
+        <div class="bike_info">
+          <div class="bike_header">
+            <h3>Kids Bike Pro</h3>
+            <span class="bike_tag green">Детский</span>
+          </div>
+
+          <p>Детский велосипед для юных райдеров</p>
+
+          <div class="bike_bottom-main">
+            <div class="bike_price">от 250 ₽/час</div>
+            <a href="catalog.html" class="btn btn-outline">Подробнее</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="bike_card">
+        <img src="img/products/bike4.png" alt="Mountain Bike Extreme">
+        <div class="bike_info">
+          <div class="bike_header">
+            <h3>Mountain Extreme</h3>
+            <span class="bike_tag teal">Новинка</span>
+          </div>
+
+          <p>Профессиональный горный велосипед для экстремальных трасс</p>
+
+          <div class="bike_bottom-main">
+            <div class="bike_price">от 450 ₽/час</div>
+            <a href="catalog.html" class="btn btn-outline">Подробнее</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <a href="catalog.html" class="btn btn-primary bikes_btn">Смотреть все</a>
+  </div>
+</section>
+<!-- Готовы отправиться в путь -->
+<div class="cta_bg">
+  <div class="cta_content">
+    <h2>Готовы отправиться в путь?</h2>
+    <p>Забронируйте велосипед прямо сейчас <br>и получите скидку 10% на первый заказ</p>
+    <a href="reserve.html" class="btn-btn-secondary">Забронировать сейчас</a>
+  </div>
+</div>
+
+<!-- Подвал -->
+    <footer class="footer">
+  <div class="container footer_inner">
+
+    <div class="footer_col footer_brand">
+      <img src="img/logo.svg" alt="VeloRent" class="footer_logo">
+      <p>Аренда велосипедов — быстро и удобно. Ваше приключение начинается здесь.</p>
+    </div>
+
+    <div class="footer_col">
+      <h4>Навигация</h4>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Велосипеды и цены</a></li>
+        <li><a href="reserve.html">Бронирование</a></li>
+        <li><a href="contact.html">О нас и контакты</a></li>
+      </ul>
+    </div>
+
+    <div class="footer_col">
+      <h4>Контакты</h4>
+      <ul class="footer_contacts">
+        <li>
+          <img src="img/icons/Phone.png" alt="Телефон">
+          <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+        </li>
+        <li>
+          <img src="img/icons/mail.png" alt="Email">
+          <a href="mailto:info@velorent.ru">info@velorent.ru</a>
+        </li>
+        <li>
+          <img src="img/icons/location.png" alt="Адрес">
+          <span>Москва, ул. Примерная, 123</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer_col">
+      <h4>Социальные сети</h4>
+      <div class="footer_socials">
+        <a href="#"><img src="img/icons/tg.png" alt="Telegram"></a>
+        <a href="#"><img src="img/icons/wa.png" alt="WhatsApp"></a>
+        <a href="#"><img src="img/icons/vk.png" alt="VK"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer_bottom">
+    <p>© 2025 VeloRent. Все права защищены.</p>
+  </div>
+</footer>
+  </div>
+</body>
+</html>

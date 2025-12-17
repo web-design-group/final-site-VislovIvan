@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VeloRent — аренда велосипедов</title>
+
+  <!-- Шрифт -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Стили проекта -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Slick -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+  <!-- jQuery + slick -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+
+  <!-- Основной скрипт -->
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <!-- Шапка -->
+  <header class="header">
+    <div class="container header_row">
+      <a href="index.html" class="logo">
+        <img src="img/logo.svg" alt="VeloRent" class="logo_image">
+      </a>
+
+      <nav class="nav" aria-label="Основное меню">
+        <ul class="nav_list">
+          <li><a class="nav_link" href="index.html">Главная</a></li>
+          <li><a class="nav_link" href="catalog.html">Велосипеды и цены</a></li>
+          <li><a class="nav_link" href="reserve.html">Бронирование</a></li>
+          <li><a class="nav_link" href="contact.html">О нас и контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header_button">
+        <a class="btn btn-primary" href="catalog.html">Забронировать</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="booking">
+      <div class="container">
+
+        <header class="booking_header">
+          <h1 class="booking_title">Бронирование</h1>
+          <p class="booking_subtitle">Заполните форму для завершения бронирования</p>
+        </header>
+
+        <!-- Индикатор шагов -->
+        <div class="steps-container">
+          <div class="steps active-1" id="stepsHeader">
+
+            <div class="step active" data-step="1">
+              <div class="step-number">1</div>
+              <div class="step-dot"></div>
+              <div class="step-title">Контакты</div>
+            </div>
+
+            <div class="step" data-step="2">
+              <div class="step-number">2</div>
+              <div class="step-dot"></div>
+              <div class="step-title">Время</div>
+            </div>
+
+            <div class="step" data-step="3">
+              <div class="step-number">3</div>
+              <div class="step-dot"></div>
+              <div class="step-title">Оплата</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Контент шагов -->
+        <div class="booking_steps-content">
+
+          <!-- ШАГ 1 – выбор велосипеда и времени -->
+          <div id="step1" class="step-content">
+
+            <div class="booking_grid">
+              <!-- Левая колонка -->
+              <div class="booking_column">
+                <section class="booking_card">
+                  <h2 class="booking_card-title">Выбор велосипеда и времени</h2>
+
+                  <form class="booking_form-fields" id="step1-form">
+                    <div class="booking_field">
+                      <label for="bike-model">Модель велосипеда *</label>
+                      <select id="bike-model" name="bikeModel" required>
+                        <option value="">Выберите модель</option>
+                        <option value="City Comfort" data-price="300">City Comfort</option>
+                        <option value="City Pro" data-price="400">City Pro</option>
+                        <option value="Mountain Trail" data-price="400">Mountain Trail</option>
+                        <option value="Mountain Extreme" data-price="450">Mountain Extreme</option>
+                        <option value="E-Bike City" data-price="500">E-Bike City</option>
+                        <option value="Kids Bike" data-price="200">Kids Bike</option>
+                        <option value="Kids Bike Pro" data-price="250">Kids Bike Pro</option>
+                      </select>
+                    </div>
+
+                    <div class="booking_field-row">
+                      <div class="booking_field">
+                        <label for="date-start">Дата начала *</label>
+                        <input type="date" id="date-start" name="dateStart" required>
+                      </div>
+
+                      <div class="booking_field">
+                        <label for="time-start">Время начала *</label>
+                        <input type="time" id="time-start" name="timeStart" required>
+                      </div>
+                    </div>
+
+                    <div class="booking_field-row">
+                      <div class="booking_field">
+                        <label for="duration">Длительность *</label>
+                        <select id="duration" name="duration" required>
+                          <option value="">Выберите длительность</option>
+                          <option value="1" data-label="1 час">1 час</option>
+                          <option value="3" data-label="3 часа">3 часа</option>
+                          <option value="24" data-label="1 день">1 день</option>
+                        </select>
+                      </div>
+
+                      <div class="booking_field">
+                        <label for="bike-count">Кол-во велосипедов *</label>
+                        <input
+                          type="number"
+                          id="bike-count"
+                          name="bikeCount"
+                          min="1"
+                          value="1"
+                          required
+                        >
+                      </div>
+                    </div>
+
+                    <div class="booking_actions">
+                      <button
+                        type="button"
+                        class="btn btn-primary booking_btn-next"
+                        id="step1-next"
+                      >
+                        Далее
+                      </button>
+                    </div>
+                  </form>
+                </section>
+              </div>
+
+              <!-- Правая колонка – сводка -->
+              <aside class="booking_card booking_summary">
+                <h2 class="booking_card-title">Сводка заказа</h2>
+
+                <div class="summary_group">
+                  <div class="summary_item">
+                    <div class="summary_label">Модель</div>
+                    <div class="summary_value" id="summary-model">—</div>
+                  </div>
+
+                  <div class="summary_item">
+                    <div class="summary_label">Дата и время</div>
+                    <div class="summary_value" id="summary-datetime">—</div>
+                  </div>
+
+                  <div class="summary_item">
+                    <div class="summary_label">Длительность</div>
+                    <div class="summary_value" id="summary-duration">—</div>
+                  </div>
+
+                  <div class="summary_item">
+                    <div class="summary_label">Количество</div>
+                    <div class="summary_value" id="summary-count">—</div>
+                  </div>
+                </div>
+
+                <div class="summary_total">
+                  <span class="summary_total-label">Итого:</span>
+                  <span class="summary_total-price" id="summary-total">0 ₽</span>
+                </div>
+
+                <p class="summary_note">Шлем и защита включены в стоимость.</p>
+              </aside>
+            </div>
+          </div>
+
+          <!-- ШАГ 2 – контакты и дополнительно -->
+          <div id="step2" class="step-content" style="display:none;">
+
+            <div class="booking_grid">
+              <!-- Левая колонка -->
+              <div class="booking_column">
+                <section class="booking_card">
+                  <h2 class="booking_card-title">Контактная информация</h2>
+
+                  <form class="booking_form-fields" id="step2-form">
+                    <div class="booking_field">
+                      <label for="user-name">Имя и фамилия *</label>
+                      <input
+                        type="text"
+                        id="user-name"
+                        required
+                        minlength="3"
+                        placeholder="Иван Иванов"
+                      >
+                    </div>
+
+                    <div class="booking_field">
+                      <label for="user-phone">Телефон *</label>
+                      <input
+                        type="tel"
+                        id="user-phone"
+                        required
+                        pattern="^(\+?\d[\d\-\s]{7,15})$"
+                        placeholder="+7 (999) 123-45-67"
+                      >
+                    </div>
+
+                    <div class="booking_field">
+                      <label for="user-email">Email *</label>
+                      <input
+                        type="email"
+                        id="user-email"
+                        required
+                        placeholder="example@mail.com"
+                      >
+                    </div>
+
+                    <div class="booking_actions booking_actions-row">
+                      <button
+                        type="button"
+                        class="btn booking_btn-secondary"
+                        onclick="goToStep(1)"
+                      >
+                        Назад
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-primary booking_btn-next"
+                        id="step2-next"
+                      >
+                        Далее
+                      </button>
+                    </div>
+                  </form>
+                </section>
+
+                <!-- Дополнительно -->
+                <section class="booking_extras">
+                  <h3 class="booking_extras-title">Дополнительно</h3>
+
+                  <label class="extras_item">
+                    <input type="checkbox" id="extra-helmet" checked disabled>
+                    <span>Шлем (включён в стоимость)</span>
+                  </label>
+
+                  <label class="extras_item">
+                    <input type="checkbox" id="extra-seat">
+                    <span>Детское сиденье (+ 50 ₽ за период)</span>
+                  </label>
+
+                  <label class="extras_item">
+                    <input type="checkbox" id="extra-delivery">
+                    <span>Доставка по адресу (+ 100 ₽)</span>
+                  </label>
+                </section>
+              </div>
+
+              <!-- Правая колонка – сводка -->
+              <aside class="booking_card booking_summary">
+                <h2 class="booking_card-title">Сводка заказа</h2>
+
+                <div class="summary_group">
+                  <div class="summary_item">
+                    <div class="summary_label">Модель</div>
+                    <div class="summary_value" id="summary-model-2">—</div>
+                  </div>
+
+                  <div class="summary_item">
+                    <div class="summary_label">Дата и время</div>
+                    <div class="summary_value" id="summary-datetime-2">—</div>
+                  </div>
+
+                  <div class="summary_item">
+                    <div class="summary_label">Длительность</div>
+                    <div class="summary_value" id="summary-duration-2">—</div>
+                  </div>
+
+                  <div class="summary_item">
+                    <div class="summary_label">Количество</div>
+                    <div class="summary_value" id="summary-count-2">—</div>
+                  </div>
+
+                  <div class="summary_item">
+                    <div class="summary_label">Дополнительно</div>
+                    <div class="summary_value" id="summary-extras-2">Шлем</div>
+                  </div>
+                </div>
+
+                <div class="summary_total">
+                  <span class="summary_total-label">Итого:</span>
+                  <span class="summary_total-price" id="summary-total-2">0 ₽</span>
+                </div>
+
+                <p class="summary_note">Шлем и защита включены в стоимость.</p>
+              </aside>
+            </div>
+          </div>
+
+          <!-- ШАГ 3 – оплата -->
+          <div id="step3" class="step-content" style="display:none;">
+
+            <div class="booking_grid">
+              <!-- Левая колонка -->
+              <div class="booking_column">
+                <section class="booking_card">
+                  <h2 class="booking_card-title">Способ оплаты</h2>
+
+                  <div class="payment_methods">
+
+                    <!-- Оплата при получении -->
+                    <label class="payment_option">
+                      <input type="radio" name="payment" value="cash" checked>
+                      <span class="payment_icon">
+                        <img src="img/icons/payment-cash.png" alt="">
+                      </span>
+                      <span class="payment_text">
+                        <span class="payment_title">Оплата при получении</span>
+                        <span class="payment_subtitle">Наличными или картой курьеру</span>
+                      </span>
+                    </label>
+
+                    <label class="payment_option">
+                      <input type="radio" name="payment" value="online">
+                      <span class="payment_icon">
+                        <img src="img/icons/payment-card.png" alt="">
+                      </span>
+                      <span class="payment_text">
+                        <span class="payment_title">Онлайн оплата</span>
+                        <span class="payment_subtitle">Демо режим</span>
+                      </span>
+                    </label>
+
+                  </div>
+
+                  <p class="payment_note">
+                    После подтверждения бронирования мы свяжемся с вами для уточнения
+                    деталей и подготовки велосипеда к указанному времени.
+                  </p>
+
+                  <div class="booking_actions booking_actions-row">
+                    <button
+                      type="button"
+                      class="btn booking_btn-secondary"
+                      onclick="goToStep(2)"
+                    >
+                      Назад
+                    </button>
+
+                    <a
+                      href="reserve-success.html"
+                      class="btn btn-primary booking_btn-next"
+                    >
+                      Подтвердить бронь
+                    </a>
+                  </div>
+                </section>
+              </div>
+
+              <!-- Правая колонка – сводка -->
+              <aside class="booking_card booking_summary">
+                <h2 class="booking_card-title">Сводка заказа</h2>
+
+                <div class="summary_group">
+                  <div class="summary_item">
+                    <div class="summary_label">Модель</div>
+                    <div class="summary_value" id="summary-model-3">—</div>
+                  </div>
+
+                  <div class="summary_item">
+                    <div class="summary_label">Дата и время</div>
+                    <div class="summary_value" id="summary-datetime-3">—</div>
+                  </div>
+
+                  <div class="summary_item">
+                    <div class="summary_label">Длительность</div>
+                    <div class="summary_value" id="summary-duration-3">—</div>
+                  </div>
+
+                  <div class="summary_item">
+                    <div class="summary_label">Количество</div>
+                    <div class="summary_value" id="summary-count-3">—</div>
+                  </div>
+
+                  <div class="summary_item">
+                    <div class="summary_label">Дополнительно</div>
+                    <div class="summary_value" id="summary-extras-3">Шлем</div>
+                  </div>
+                </div>
+
+                <div class="summary_total">
+                  <span class="summary_total-label">Итого:</span>
+                  <span class="summary_total-price" id="summary-total-3">0 ₽</span>
+                </div>
+
+                <p class="summary_note">Шлем и защита включены в стоимость.</p>
+              </aside>
+            </div>
+          </div>
+
+        </div> <!-- /booking_steps-content -->
+      </div>   <!-- /container -->
+    </section>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="footer">
+    <div class="container footer_inner">
+
+      <div class="footer_col footer_brand">
+        <img src="img/logo.svg" alt="VeloRent" class="footer_logo">
+        <p>Аренда велосипедов — быстро и удобно. Ваше приключение начинается здесь.</p>
+      </div>
+
+      <div class="footer_col">
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Велосипеды и цены</a></li>
+          <li><a href="reserve.html">Бронирование</a></li>
+          <li><a href="contact.html">О нас и контакты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_col">
+        <h4>Контакты</h4>
+        <ul class="footer_contacts">
+          <li>
+            <img src="img/icons/Phone.png" alt="Телефон">
+            <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+          </li>
+          <li>
+            <img src="img/icons/mail.png" alt="Email">
+            <a href="mailto:info@velorent.ru">info@velorent.ru</a>
+          </li>
+          <li>
+            <img src="img/icons/location.png" alt="Адрес">
+            <span>Москва, ул. Примерная, 123</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer_col">
+        <h4>Социальные сети</h4>
+        <div class="footer_socials">
+          <a href="#"><img src="img/icons/tg.png" alt="Telegram"></a>
+          <a href="#"><img src="img/icons/wa.png" alt="WhatsApp"></a>
+          <a href="#"><img src="img/icons/vk.png" alt="VK"></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer_bottom">
+      <p>© 2025 VeloRent. Все права защищены.</p>
+    </div>
+  </footer>
+</body>
+</html>

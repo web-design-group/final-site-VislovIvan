@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Велосипеды и цены</title>
+
+  <!-- Шрифт -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Стили -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Скрипт -->
+   <script src="js/main.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <!-- Шапка -->
+    <header class="header">
+  <div class="container header_row">
+    <a href="index.html" class="logo">
+      <img src="img/logo.svg" alt="VeloRent" class="logo_image">
+    </a>
+
+    <nav class="nav" aria-label="Основное меню">
+      <ul class="nav_list">
+        <li><a class="nav_link" href="index.html">Главная</a></li>
+        <li><a class="nav_link" href="catalog.html">Велосипеды и цены</a></li>
+        <li><a class="nav_link" href="reserve.html">Бронирование</a></li>
+        <li><a class="nav_link" href="contact.html">О нас и контакты</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+  <main class="catalog">
+
+  <div class="container">
+    <h1 class="catalog_title">Велосипеды и цены</h1>
+    <p class="catalog_subtitle">Выберите подходящий велосипед из нашего каталога</p>
+  </div>
+
+  <div class="container catalog_row catalog-page">
+
+    <!-- Фильтры -->
+    <aside class="filters">
+  <h3>Фильтры</h3>
+
+  <!-- Тип велосипеда -->
+  <div class="filter_group">
+    <p class="filter_title">Тип велосипеда</p>
+
+    <label><input type="radio" name="bike-type" value="all" checked> Все</label>
+    <label><input type="radio" name="bike-type" value="city"> City</label>
+    <label><input type="radio" name="bike-type" value="mountain"> Mountain</label>
+    <label><input type="radio" name="bike-type" value="ebike"> E-bike</label>
+    <label><input type="radio" name="bike-type" value="kids"> Детский</label>
+  </div>
+
+  <!-- Цена -->
+  <div class="filter_group">
+    <p class="filter_title">Цена 0 ₽ – <span id="filter-price-label">600 ₽</span></p>
+    <input type="range" id="filter-price" min="0" max="600" value="600">
+  </div>
+
+  <!-- Что включено -->
+  <div class="filter_group">
+    <p class="filter_title">Что включено</p>
+
+    <label><input type="checkbox" id="filter-helmet" checked> Шлем и защита</label>
+    <label><input type="checkbox" id="filter-lock" checked> Замок для велосипеда</label>
+    <label><input type="checkbox" id="filter-pump" checked> Насос и ремкомплект</label>
+  </div>
+</aside>
+
+ <!-- Grid каталог -->
+<section class="catalog_grid">
+
+  <!-- 1 -->
+  <div class="bike_card" data-type="city" data-price="300" data-helmet="1" data-lock="1" data-pump="1">
+    <img src="img/products/bike1.png" alt="City Comfort">
+    <div class="bike_info">
+      <div class="bike_title_row">
+        <h3>City Comfort</h3>
+        <span class="badge">Популярный</span>
+      </div>
+      <p class="bike_subtitle">Удобный городской велосипед для повседневных поездок</p>
+      <ul class="bike_desc">
+        <li>7 скоростей</li>
+        <li>Корзина</li>
+        <li>Подножка</li>
+      </ul>
+      <div class="bike_bottom">
+        <div class="bike_price">от 300 ₽/час</div>
+        <a href="reserve.html" class="btn-outline">Выбрать</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="bike_card" data-type="city" data-price="400" data-helmet="1" data-lock="1" data-pump="1">
+    <img src="img/products/bike2.png" alt="City Pro">
+    <div class="bike_info">
+      <div class="bike_title_row">
+        <h3>City Pro</h3>
+        <span class="badge">Топ выбора</span>
+      </div>
+      <p class="bike_subtitle">Продвинутый городской велосипед с отличной маневренностью</p>
+      <ul class="bike_desc">
+        <li>21 скорость</li>
+        <li>Амортизация</li>
+        <li>Легкая рама</li>
+      </ul>
+      <div class="bike_bottom">
+        <div class="bike_price">от 400 ₽/час</div>
+        <a href="reserve.html" class="btn-outline">Выбрать</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="bike_card" data-type="mountain" data-price="400" data-helmet="1" data-lock="0" data-pump="1">
+    <img src="img/products/bike3.png" alt="Mountain Trail">
+    <div class="bike_info">
+      <div class="bike_title_row"><h3>Mountain Trail</h3></div>
+      <p class="bike_subtitle">Горный велосипед для бездорожья и активного отдыха</p>
+      <ul class="bike_desc">
+        <li>24 скорости</li>
+        <li>Дисковые тормоза</li>
+        <li>Прочная рама</li>
+      </ul>
+      <div class="bike_bottom">
+        <div class="bike_price">от 400 ₽/час</div>
+        <a href="reserve.html" class="btn-outline">Выбрать</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="bike_card" data-type="mountain" data-price="450" data-helmet="1" data-lock="1" data-pump="0">
+    <img src="img/products/bike4.png" alt="Mountain Extreme">
+    <div class="bike_info">
+      <div class="bike_title_row">
+        <h3>Mountain Extreme</h3>
+        <span class="badge">Новинка</span>
+      </div>
+      <p class="bike_subtitle">Профессиональный горный велосипед для экстремальных трасс</p>
+      <ul class="bike_desc">
+        <li>27 скоростей</li>
+        <li>Гидравлические тормоза</li>
+        <li>Карбоновая вилка</li>
+      </ul>
+      <div class="bike_bottom">
+        <div class="bike_price">от 450 ₽/час</div>
+        <a href="reserve.html" class="btn-outline">Выбрать</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="bike_card" data-type="ebike" data-price="500" data-helmet="1" data-lock="1" data-pump="1">
+    <img src="img/products/bike5.png" alt="E-Bike City">
+    <div class="bike_info">
+      <div class="bike_title_row">
+        <h3>E-Bike City</h3>
+        <span class="badge">Популярный</span>
+      </div>
+      <p class="bike_subtitle">Электровелосипед для комфортных городских поездок</p>
+      <ul class="bike_desc">
+        <li>Запас хода 70 км</li>
+        <li>Быстрая зарядка</li>
+        <li>LCD дисплей</li>
+      </ul>
+      <div class="bike_bottom">
+        <div class="bike_price">от 500 ₽/час</div>
+        <a href="reserve.html" class="btn-outline">Выбрать</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="bike_card" data-type="kids" data-price="200" data-helmet="0" data-lock="1" data-pump="0">
+    <img src="img/products/bike6.png" alt="Kids Bike">
+    <div class="bike_info">
+      <div class="bike_title_row"><h3>Kids Bike</h3></div>
+      <p class="bike_subtitle">Детский велосипед с защитными колесиками</p>
+      <ul class="bike_desc">
+        <li>Боковые колеса</li>
+        <li>Регулируемое седло</li>
+        <li>Яркий дизайн</li>
+      </ul>
+      <div class="bike_bottom">
+        <div class="bike_price">от 200 ₽/час</div>
+        <a href="reserve.html" class="btn-outline">Выбрать</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="bike_card" data-type="kids" data-price="250" data-helmet="1" data-lock="1" data-pump="1">
+    <img src="img/products/bike7.png" alt="Kids Bike Pro">
+    <div class="bike_info">
+      <div class="bike_title_row"><h3>Kids Bike Pro</h3></div>
+      <p class="bike_subtitle">Детский велосипед для юных райдеров</p>
+      <ul class="bike_desc">
+        <li>6 скоростей</li>
+        <li>Легкая рама</li>
+        <li>Передний амортизатор</li>
+      </ul>
+      <div class="bike_bottom">
+        <div class="bike_price">от 250 ₽/час</div>
+        <a href="reserve.html" class="btn-outline">Выбрать</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+  </div>
+
+  <section class="faq">
+    <div class="container">
+        <h2 class="faq_title">Часто задаваемые вопросы</h2>
+
+        <div class="faq_list">
+            <!-- 1 -->
+            <div class="faq_item">
+                <button class="faq_question">
+                    Нужен ли залог при аренде?
+                    <span class="faq_icon">⌄</span>
+                </button>
+                <div class="faq_answer">
+                    Да, для аренды требуется залог в размере 100 € или копия документа, удостоверяющего личность. 
+                    Залог возвращается после возврата велосипеда в хорошем состоянии.
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="faq_item">
+                <button class="faq_question">
+                    Есть ли доставка велосипедов?
+                    <span class="faq_icon">⌄</span>
+                </button>
+                <div class="faq_answer">
+                  Да, мы осуществляем доставку велосипедов по городу за дополнительную плату.
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="faq_item">
+                <button class="faq_question">
+                    Можно ли продлить аренду?
+                    <span class="faq_icon">⌄</span>
+                </button>
+                <div class="faq_answer">
+                  Да, вы можете продлить срок аренды при наличии свободных велосипедов. 
+                  Для этого необходимо связаться с менеджером по телефону или через форму обратной связи на сайте не позднее чем за 1 час 
+                  до окончания текущей аренды.
+
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="faq_item">
+                <button class="faq_question">
+                    Что делать в случае поломки?
+                    <span class="faq_icon">⌄</span>
+                </button>
+                <div class="faq_answer">
+                  Если во время аренды произошла поломка, необходимо сразу прекратить использование велосипеда и сообщить о проблеме в службу поддержки. 
+                  Наш специалист выедет на место или предоставит замену велосипеда без дополнительных затрат, если поломка не связана с нарушением правил эксплуатации.
+
+
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="faq_item">
+                <button class="faq_question">
+                    Есть ли скидки на длительную аренду?
+                    <span class="faq_icon">⌄</span>
+                </button>
+                <div class="faq_answer">
+                  На данный момент система скидок не предусмотрена. 
+                  Стоимость аренды фиксирована и зависит только от выбранной модели велосипеда и длительности использования.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- Подвал -->
+    <footer class="footer">
+  <div class="container footer_inner">
+
+    <div class="footer_col footer_brand">
+      <img src="img/logo.svg" alt="VeloRent" class="footer_logo">
+      <p>Аренда велосипедов — быстро и удобно. Ваше приключение начинается здесь.</p>
+    </div>
+
+    <div class="footer_col">
+      <h4>Навигация</h4>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Велосипеды и цены</a></li>
+        <li><a href="reserve.html">Бронирование</a></li>
+        <li><a href="contact.html">О нас и контакты</a></li>
+      </ul>
+    </div>
+
+    <div class="footer_col">
+      <h4>Контакты</h4>
+      <ul class="footer_contacts">
+        <li>
+          <img src="img/icons/Phone.png" alt="Телефон">
+          <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+        </li>
+        <li>
+          <img src="img/icons/mail.png" alt="Email">
+          <a href="mailto:info@velorent.ru">info@velorent.ru</a>
+        </li>
+        <li>
+          <img src="img/icons/location.png" alt="Адрес">
+          <span>Москва, ул. Примерная, 123</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer_col">
+      <h4>Социальные сети</h4>
+      <div class="footer_socials">
+        <a href="#"><img src="img/icons/tg.png" alt="Telegram"></a>
+        <a href="#"><img src="img/icons/wa.png" alt="WhatsApp"></a>
+        <a href="#"><img src="img/icons/vk.png" alt="VK"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer_bottom">
+    <p>© 2025 VeloRent. Все права защищены.</p>
+  </div>
+</footer>
+  </div>
+</body>
+</html>

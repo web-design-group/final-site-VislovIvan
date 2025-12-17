@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VeloRent — аренда велосипедов</title>
+
+  <!-- Шрифт -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Общий CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- CSS для страницы контактов -->
+  <link rel="stylesheet" href="css/contact.css">
+
+  <!-- Скрипт -->
+  <script src="js/main.js" defer></script>
+
+   
+
+</head>
+<body>
+  <div class="page">
+    <!-- Шапка -->
+    <header class="header">
+  <div class="container header_row">
+    <a href="index.html" class="logo">
+      <img src="img/logo.svg" alt="VeloRent" class="logo_image">
+    </a>
+
+    <nav class="nav" aria-label="Основное меню">
+      <ul class="nav_list">
+        <li><a class="nav_link" href="index.html">Главная</a></li>
+        <li><a class="nav_link" href="catalog.html">Велосипеды и цены</a></li>
+        <li><a class="nav_link" href="reserve.html">Бронирование</a></li>
+        <li><a class="nav_link" href="contact.html">О нас и контакты</a></li>
+      </ul>
+    </nav>
+
+    <div class="header_button">
+      <a class="btn btn-primary" href="catalog.html">Забронировать</a>
+    </div>
+  </div>
+</header>
+
+    <!-- О нас -->
+    <main class="contacts-page py-5">
+
+  <section class="container mb-5">
+    <h1 class="mb-3">О нас и контакты</h1>
+    <p class="text-muted mb-5">Узнайте больше о нашем сервисе и свяжитесь с нами</p>
+
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h2 class="section-subtitle2">О нашем сервисе</h2>
+
+        <p>
+          VeloRent — это современный сервис аренды велосипедов, который делает городские передвижения удобными, экологичными <br>и доступными для каждого.<br>
+          Мы работаем с 2020 года и за это время помогли тысячам людей открыть для себя удовольствие от велопрогулок. Наша миссия — сделать велосипеды доступными для всех, кто хочет исследовать город, заниматься спортом или просто наслаждаться активным отдыхом.<br>
+          У нас широкий выбор велосипедов для любых целей: <br>от комфортных городских моделей до мощных горных байков и современных электровелосипедов. Все велосипеды проходят регулярное техническое обслуживание и находятся в отличном состоянии.<br>
+          Наша команда профессионалов всегда готова помочь вам <br>с выбором и ответить на любые вопросы. Мы работаем для того, чтобы ваше путешествие было безопасным и незабываемым!
+        </p>
+        </div>
+
+        <div class="col-lg-6">
+          <img src="img/about.png" class="img-fluid rounded shadow-sm" alt="О нас">
+        </div>
+      </div>
+    </section>
+
+    <!-- Как нас найти -->
+    <section class="container section-block">
+    <h2>Как нас найти</h2>
+
+    <div class="row g-4">
+
+      <!-- Карта -->
+      <div class="col-lg-7">
+        <div class="contacts-map shadow-sm">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3Aexample&source=constructor"
+            title="Карта: VeloRent"
+            style="border: 0;"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Контакты -->
+      <div class="col-lg-5">
+        <div class="card contacts-card shadow-sm">
+          <div class="card-body">
+
+            <h5 class="card-title mb-3">Контактная информация</h5>
+
+            <p class="d-flex">
+              <img src="img/icons/location1.svg" class="contact-icon" alt="">
+              <span>
+                <strong>Адрес</strong><br>
+                Москва, ул. Примерная, 123<br>
+                <span class="contact-sub">м. Парк Культуры</span>
+              </span>
+            </p>
+
+            <p class="d-flex">
+              <img src="img/icons/phone1.svg" class="contact-icon" alt="">
+              <span>
+                <strong>Телефон</strong><br>
+                +7 (999) 123-45-67<br>
+                <span class="contact-sub">Круглосуточно</span>
+              </span>
+            </p>
+
+            <p class="d-flex">
+              <img src="img/icons/email1.svg" class="contact-icon" alt="">
+              <span>
+                <strong>Email</strong><br>
+                info@velorent.ru<br>
+                <span class="contact-sub">Ответим в течение часа</span>
+              </span>
+            </p>
+
+            <p class="d-flex">
+              <img src="img/icons/chat.svg" class="contact-icon" alt="">
+              <span>
+                <strong>Мессенджеры</strong><br>
+                WhatsApp, Telegram, Viber<br>
+                <span class="contact-sub">+7 (999) 123-45-67</span>
+              </span>
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Часы работы -->
+<section class="container section-block">
+  <div class="hours-wrapper">
+    <div class="hours-card">
+
+      <div class="hours-header">
+        <img src="img/icons/time.svg" alt="" class="hours-icon">
+        <h3 class="hours-title">Часы работы</h3>
+      </div>
+
+      <div class="hours-row">
+        <span>Понедельник – Пятница</span>
+        <strong>09:00 – 21:00</strong>
+      </div>
+
+      <div class="hours-row">
+        <span>Суббота – Воскресенье</span>
+        <strong>10:00 – 22:00</strong>
+      </div>
+
+      <div class="hours-row">
+        <span>Праздничные дни</span>
+        <strong>10:00 – 20:00</strong>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Форма -->
+<section class="container section-block">
+  <h2 class="section-title2 text-center">Задать вопрос</h2>
+  <p class="section-subtitle text-center">
+    Есть вопросы? Напишите нам — мы ответим в ближайшее время
+  </p>
+
+  <form class="contact-form" id="question-form">
+
+    <div class="mb-3">
+      <label class="form-label">Ваше имя *</label>
+      <input type="text" class="form-control" placeholder="Иван Иванов" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email *</label>
+      <input type="email" class="form-control" placeholder="example@mail.com" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Сообщение *</label>
+      <textarea class="form-control" rows="4" placeholder="Напишите ваш вопрос" required></textarea>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Отправить</button>
+  </form>
+</section>
+
+  <!-- Отзывы-->
+  <section class="container reviews-section">
+  <h2 class="section-title2 text-center">Отзывы наших клиентов</h2>
+  <p class="section-subtitle text-center">Узнайте, что говорят о нас люди</p>
+
+  <div class="row g-4 justify-content-center">
+
+    <!-- 1 -->
+    <div class="col-md-4">
+      <div class="review-card">
+        <div class="review-header">
+          <img src="img/avatars/user1.png" alt="" class="review-avatar">
+          <div>
+            <h5 class="review-name">Александр П.</h5>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+
+        <p class="review-text">
+         "Отличный сервис! Велосипеды в идеальном состоянии, доставка быстрая.
+          Брал E-Bike на неделю — очень доволен!"
+        </p>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="col-md-4">
+      <div class="review-card">
+        <div class="review-header">
+          <img src="img/avatars/user2.png" alt="" class="review-avatar">
+          <div>
+            <h5 class="review-name">Мария С.</h5>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+
+        <p class="review-text">
+          "Арендовала City Bike для прогулок по парку. Всё прошло идеально,
+          персонал очень внимательный и дружелюбный!"
+        </p>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="col-md-4">
+      <div class="review-card">
+        <div class="review-header">
+          <img src="img/avatars/user3.png" alt="" class="review-avatar">
+          <div>
+            <h5 class="review-name">Дмитрий К.</h5>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+
+        <p class="review-text">
+          "Пользуюсь услугами VeloRent уже третий раз. Цены адекватные,
+          велосипеды отличные, поддержка на высоте!"
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<!-- Поп-ап "Вопрос отправлен" -->
+<div class="popup" id="question-popup">
+  <div class="popup_backdrop"></div>
+  <div class="popup_card">
+    <div class="popup_icon">
+  <img src="img/icons/check.png" alt="OK">
+</div>
+    <p class="popup_text">
+      Ваш вопрос доставлен - ожидайте ответа в ближайшее время.
+    </p>
+    <button type="button" class="btn popup_btn" id="question-popup-close">
+      Закрыть
+    </button>
+  </div>
+</div>
+
+<!-- Подвал -->
+    <footer class="footer">
+  <div class="container footer_inner">
+
+    <div class="footer_col footer_brand">
+      <img src="img/logo.svg" alt="VeloRent" class="footer_logo">
+      <p>Аренда велосипедов — быстро и удобно. Ваше приключение начинается здесь.</p>
+    </div>
+
+    <div class="footer_col">
+      <h4>Навигация</h4>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Велосипеды и цены</a></li>
+        <li><a href="reserve.html">Бронирование</a></li>
+        <li><a href="contact.html">О нас и контакты</a></li>
+      </ul>
+    </div>
+
+    <div class="footer_col">
+      <h4>Контакты</h4>
+      <ul class="footer_contacts">
+        <li>
+          <img src="img/icons/Phone.png" alt="Телефон">
+          <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+        </li>
+        <li>
+          <img src="img/icons/mail.png" alt="Email">
+          <a href="mailto:info@velorent.ru">info@velorent.ru</a>
+        </li>
+        <li>
+          <img src="img/icons/location.png" alt="Адрес">
+          <span>Москва, ул. Примерная, 123</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer_col">
+      <h4>Социальные сети</h4>
+      <div class="footer_socials">
+        <a href="#"><img src="img/icons/tg.png" alt="Telegram"></a>
+        <a href="#"><img src="img/icons/wa.png" alt="WhatsApp"></a>
+        <a href="#"><img src="img/icons/vk.png" alt="VK"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer_bottom">
+    <p>© 2025 VeloRent. Все права защищены.</p>
+  </div>
+</footer>
+  </div>
+</body>
+</html>
